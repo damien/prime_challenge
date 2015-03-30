@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+
+$LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
+
+require 'benchmark'
+require 'cli'
+require 'prime'
+
+cli = CLI.new(ARGV)
+
+time = Benchmark.realtime do
+  cli.run!
+end
+
+puts
+puts format('Finished in %f seconds', time)
