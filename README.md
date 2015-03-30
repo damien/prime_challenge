@@ -1,4 +1,5 @@
-# Prime Challenge
+# Prime Challenge [![Build Status](https://travis-ci.org/damien/prime_challenge.svg)](https://travis-ci.org/damien/prime_challenge)
+
 
 A couple of simple prime number generators and an interface to play with them.
 
