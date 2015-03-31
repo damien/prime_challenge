@@ -11,11 +11,11 @@ RuboCop::RakeTask.new(:rubocop) do |t|
   t.fail_on_error = true
 end
 
-desc 'Start a Pry session after loading Prime and PrimeTable'
+desc 'Start a Pry session after loading Prime, MultiplicationTable, and CLI'
 task :console do
   require 'pry'
   $LOAD_PATH.unshift File.expand_path('../lib', __FILE__)
-  Pry.config.requires += %w(prime multiplication_table)
+  Pry.config.requires += %w(cli multiplication_table prime)
   Pry.start
 end
 
