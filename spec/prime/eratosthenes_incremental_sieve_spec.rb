@@ -15,10 +15,6 @@ describe Prime::EratosthenesIncrementalSieve do
       @sieve.take(10).must_equal(TestHelper::FIRST_1000_PRIMES.take(10))
     end
 
-    it 'responds to #take' do
-      @sieve.take(10).must_equal(TestHelper::FIRST_1000_PRIMES.take(10))
-    end
-
     it 'may be iterated upon' do
       enum = @sieve.each
       enum.succ.must_equal(TestHelper::FIRST_1000_PRIMES[0])
